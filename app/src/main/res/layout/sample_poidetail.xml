@@ -1,0 +1,80 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Sample1PoiDetailActivity" >
+
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="10dip">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:text="id" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/poi_id"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="10dip">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:text="name" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/poi_title"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="10dip">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:text="address" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/poi_description"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:id="@+id/layoutRating">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="rating" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/textViewRating" />
+        </LinearLayout>
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            tools:context="in.project.walkingstick.MapsActivity" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_gravity="center_horizontal"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="20dp"
+            android:id="@+id/imageViewLocation"
+            android:src="@mipmap/ic_launcher" />
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webViewWiki"
+            android:scrollbars="vertical"
+            android:layout_gravity="center_horizontal" />
+
+
+    </LinearLayout>
+</ScrollView>
